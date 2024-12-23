@@ -22,6 +22,8 @@ Run:
 
 to set your apikey.
 
+By just running `hslterm` you will see a basic view that let's you search for a stop in the terminal
+
 To get the timetable of a stop run:
 
 `hslterm -stop=[NAME OF STOP]`
