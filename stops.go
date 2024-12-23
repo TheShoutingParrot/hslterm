@@ -104,8 +104,11 @@ func newTuiStopFrame(stop Stop, left string, right string) (tview.Primitive, err
 				transportModeEmoji(stop.VehicleMode)),
 			true, tview.AlignCenter, tcell.ColorWhite).
 		AddText(fmt.Sprintf("%v (%v)", stop.Desc, stop.Code), true, tview.AlignCenter, tcell.ColorRed).
-		AddText("m for menu", false, tview.AlignCenter, tcell.ColorLightBlue).
 		AddText(routesText, false, tview.AlignCenter, tcell.ColorBlue)
+
+	if left != "" || right != "" {
+		frame.AddText("m for menu", false, tview.AlignCenter, tcell.ColorLightBlue)
+	}
 
 	if left != "" {
 		frame.AddText("← ("+left+")", false, tview.AlignLeft, tcell.ColorBlue)

@@ -231,6 +231,7 @@ func main() {
 
 		for _, stop := range stops {
 			printStop(stop)
+			fmt.Print("\n")
 		}
 
 		return
